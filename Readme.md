@@ -16,3 +16,5 @@ javac Main.java
 // 実行
 java Main
 
+./do.sh
+
