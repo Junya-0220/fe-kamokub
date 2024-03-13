@@ -1,13 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        int num1 = 12;
-        double num2 = 12.345;
-        String str1 = "こんにちは";
-        char chr1 = 'A';
+        int value;
+        value = 100;
 
-        System.out.println(num1);
-        System.out.println(num2);
-        System.out.println(str1);
-        System.out.println(chr1);
+        if (value == 0 ||value == 100){
+            System.out.println("0 or 100");
+        }else{
+            System.out.println("0でも100でもない");
+        }
     }
 }
