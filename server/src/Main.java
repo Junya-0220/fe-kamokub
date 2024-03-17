@@ -2,21 +2,21 @@ import java.util.Calendar;
 
 public class Main {
     public static void main(String[] args) {
-        int value;
-        int[][] array = new int[][]{
-            {3,0,0,0,0},
-            {0,2,2,0,0},
-            {0,0,0,1,3},
-            {0,0,0,2,0},
-            {0,0,0,0,1},
-        };
-        int right,left;
-        int temp;
+        // for while do while
+        int[] array = new int[]{1,2,3,4,5};
+        int right;
+        int tmp;
+        
+        for(int left = 0; left <= (array.length - 1)  / 2 ; left = left + 1){
+            right = (array.length - 1) - left;
+            tmp = array[right];
+            array[right] = array[left];
+            array[left] = tmp;
+        }
 
-        System.out.println(array[0][0]);
-        System.out.println(array[1][0]);
-        System.out.println(array[2][0]);
-        System.out.println(array[3][0]);
-        System.out.println(array[4][0]);
+        for (int i = 0; i <= array.length - 1; i++) {
+            System.out.println(array[i]);
+          }
+
     }
 }
