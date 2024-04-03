@@ -1,33 +1,23 @@
+
 public class Main {
     public static void main(String[] args) {
+        // Javaでは要素番号は０から開始なので、以下の初期値も１引いたものとしている
+        int [] bins = bitSort(new int[]{3,1,4,4,5,2});
 
-        System.out.println(Integer.toBinaryString(rev(0b01001011)));
+        for(int bin: bins){
+            System.out.println(bin);
+        }
     }
-    /*
-    rbyte 01001011
-    01001011
-    00000001
-    欲しいところを1にして論理積を取る
-    
-    step1
-    00000000 or
-    00000001
-    00000001
 
-    r = 00000001
-
-    rbyte 00100101
-     */
-    private static int rev(int _byte){
-        int rbyte = _byte;
-        int r = 0b00000000;
+    private static int[] bitSort(int[] data)   {
+        int n = data.length;
+        int[] bins = new int[n];
         int i;
 
-        for(i=1;i<=8;i++){
-            r = (r << 1) | (rbyte & 0b00000001);
-            rbyte = rbyte >> 1;
+        for(i = 0; i <= n - 1; i++){
+            bins[data[i]] = data[i];
         }
 
-        return r;
+        return bins;
     }
 }
